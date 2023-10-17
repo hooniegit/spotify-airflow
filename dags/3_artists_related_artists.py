@@ -36,7 +36,7 @@ start = EmptyOperator(
 curl = BashOperator(
 	task_id='curl',
 	bash_command=f"""
-	curl '{host_fastapi}:{port_fastapi}/mysql/related_artists?cnt=3&insert_date={date}'
+	curl '{host_fastapi}:{port_fastapi}/mysql/related_artists?insert_date={date}'
 	""",
 	dag=dag
 )
