@@ -24,7 +24,7 @@ dag = DAG('browse.new.releases',
 		  default_args=default_args,
 		  tags=['API', 'MySQL'],
 		  max_active_runs=1,
-		  schedule_interval="15 15 * * *")
+		  schedule_interval="0 15 * * *")
 
 # start
 start = EmptyOperator(

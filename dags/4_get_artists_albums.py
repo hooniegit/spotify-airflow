@@ -24,7 +24,7 @@ dag = DAG('get.artists.albums',
 		  default_args=default_args,
 		  tags=['API', 'MySQL', 'multi-thread'],
 		  max_active_runs=1,
-		  schedule_interval="20 15 * * *")
+		  schedule_interval="30 15 * * *")
 
 # start
 start = EmptyOperator(
