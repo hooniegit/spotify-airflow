@@ -16,7 +16,7 @@ date = "{{ (execution_date + macros.timedelta(days=1)).strftime('%Y-%m-%d') }}"
 default_args = {
     'owner': 'spotify:1.0.0',
     'depends_on_past': True,
-    'start_date': datetime(2023,10,16)
+    'start_date': datetime(2023,10,23)
 }
 
 # dag 설정
@@ -24,7 +24,7 @@ dag = DAG('browse.featured.playlists',
 		  default_args=default_args,
 		  tags=['API', 'MySQL'],
 		  max_active_runs=1,
-		  schedule_interval="5 15 * * *")
+		  schedule_interval="0 0 * * *")
 
 # start
 start = EmptyOperator(
